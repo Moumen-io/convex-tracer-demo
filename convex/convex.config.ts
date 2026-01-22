@@ -1,4 +1,4 @@
-import tracer from "convex-tracer/convex.config.js";
+import tracer from "convex-tracer/convex.config";
 import { defineApp } from "convex/server";
 
 const app = defineApp();

@@ -416,7 +416,7 @@ export const createOrder = tracedMutation({
       itemCount: args.items.length,
     });
   },
-  onSuccess: async (ctx, args, result) => {
+  onSuccess: async (ctx, _, result) => {
     await ctx.tracer.info("Order created successfully", {
       orderId: result.orderId,
       total: result.total,
