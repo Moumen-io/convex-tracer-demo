@@ -39,8 +39,8 @@ importers:
         specifier: ^1.31.6
         version: 1.31.6(react@19.2.3)
       convex-tracer:
-        specifier: ^0.1.0
-        version: 0.1.0(convex@1.31.6(react@19.2.3))(react@19.2.3)
+        specifier: ^0.1.2
+        version: 0.1.2(convex@1.31.6(react@19.2.3))(react@19.2.3)
       lucide-react:
         specifier: ^0.562.0
         version: 0.562.0(react@19.2.3)
@@ -1322,8 +1322,8 @@ packages:
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
 
-  convex-tracer@0.1.0:
-    resolution: {integrity: sha512-PyaZ6YJvQy80iUrWTxfNi61GQrXUog96HxGTcYswj6uiDHL7UuK7W72s2vgkVYnGqP1NiN6HjsKBJ1+ch5kFlw==}
+  convex-tracer@0.1.2:
+    resolution: {integrity: sha512-CLCs8S+VfdrzQFv9m7dmSyA7BEyF4MrYpBTZ9U7N2LQM1usddPEsmccwk4+B3WWo3dweVVdbiwkKh4YRrPcELg==}
     peerDependencies:
       convex: ^1.29.3
       react: ^18.3.1 || ^19.0.0
@@ -3009,7 +3009,7 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-  convex-tracer@0.1.0(convex@1.31.6(react@19.2.3))(react@19.2.3):
+  convex-tracer@0.1.2(convex@1.31.6(react@19.2.3))(react@19.2.3):
     dependencies:
       convex: 1.31.6(react@19.2.3)
       react: 19.2.3

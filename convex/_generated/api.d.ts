@@ -113,6 +113,7 @@ export declare const components: {
           sampleRate: number;
           source: "frontend" | "backend";
           status: "pending" | "success" | "error";
+          userId: "anonymous" | string;
         },
         string
       >;
@@ -123,6 +124,7 @@ export declare const components: {
         null | {
           _creationTime: number;
           _id: string;
+          functionName?: string;
           metadata?: Record<string, any>;
           preserve?: boolean;
           sampleRate: number;
@@ -162,20 +164,68 @@ export declare const components: {
         "query",
         "internal",
         {
-          limit?: number;
+          paginationOpts: {
+            cursor: string | null;
+            endCursor?: string | null;
+            id?: number;
+            maximumBytesRead?: number;
+            maximumRowsRead?: number;
+            numItems: number;
+          };
           status?: "pending" | "success" | "error";
           userId?: string;
         },
-        Array<{
-          _creationTime: number;
-          _id: string;
-          metadata?: Record<string, any>;
-          preserve?: boolean;
-          sampleRate: number;
-          status: "pending" | "success" | "error";
-          updatedAt: number;
+        {
+          continueCursor: string;
+          isDone: boolean;
+          page: Array<{
+            _creationTime: number;
+            _id: string;
+            functionName?: string;
+            metadata?: Record<string, any>;
+            preserve?: boolean;
+            sampleRate: number;
+            status: "pending" | "success" | "error";
+            updatedAt: number;
+            userId?: string;
+          }>;
+          pageStatus?: "SplitRecommended" | "SplitRequired" | null;
+          splitCursor?: string | null;
+        }
+      >;
+      searchTraces: FunctionReference<
+        "query",
+        "internal",
+        {
+          functionName: string;
+          paginationOpts: {
+            cursor: string | null;
+            endCursor?: string | null;
+            id?: number;
+            maximumBytesRead?: number;
+            maximumRowsRead?: number;
+            numItems: number;
+          };
+          status?: "pending" | "success" | "error";
           userId?: string;
-        }>
+        },
+        {
+          continueCursor: string;
+          isDone: boolean;
+          page: Array<{
+            _creationTime: number;
+            _id: string;
+            functionName?: string;
+            metadata?: Record<string, any>;
+            preserve?: boolean;
+            sampleRate: number;
+            status: "pending" | "success" | "error";
+            updatedAt: number;
+            userId?: string;
+          }>;
+          pageStatus?: "SplitRecommended" | "SplitRequired" | null;
+          splitCursor?: string | null;
+        }
       >;
       updateSpanMetadata: FunctionReference<
         "mutation",
